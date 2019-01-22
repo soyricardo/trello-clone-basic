@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'trello-clone-v1';
+  title = 'Trello Clone - Basic Version - Ricardo Arruda Matias';
 }
