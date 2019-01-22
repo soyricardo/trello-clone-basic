@@ -2,7 +2,7 @@
 
 header {
   height: $headerHeight;
-  background: linear-gradient(to left, cornflowerblue, black);
+  background: linear-gradient(to right, #001f3f, #034f84);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,4 +19,16 @@ input {
 
 input::placeholder {
   color: white;
+}
+
+.agregar_tarea {
+  margin-left: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.logo {
+  height: 125px;
+  width: 150px;
+  overflow: hidden;
 }
