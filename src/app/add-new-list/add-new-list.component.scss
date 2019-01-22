@@ -31,4 +31,16 @@ input::placeholder {
   height: 125px;
   width: 150px;
   overflow: hidden;
+  transition: all .3s ease-in-out;
 }
+
+.logo:hover {
+  
+    height: 110px;
+    width: 130px;
+    overflow: hidden;
+    transform: scale(.9);
+    box-shadow: 0 15px 20px rgba(0,0,0, 0.5);
+}
+
+
