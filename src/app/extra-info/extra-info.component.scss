@@ -1,0 +1,59 @@
+button {
+    padding: 2px;
+    font-size: 1.2rem;
+    border: none;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+
+.btnMoreInfo {
+    position: relative;
+  }
+  
+  .btnMoreInfo:hover::before {
+    width: 100%;
+  }
+  
+  .btnMoreInfo::before {
+    content: '';
+    height: 3px;
+    width: 0%;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: width 0.3s;
+  }
+  
+    .btnMoreInfo:hover::after {
+      height: 100%;
+    }
+  
+  .btnMoreInfo::after {
+    content: '';
+    height: 0%;
+    width: 3px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    transition: height 0.3s;
+  }
+
+.project-info {
+    width: 25vw;
+    border-left: 4px solid rgb(20, 20, 20); 
+    // margin-left: 1rem;
+    padding: 0.1rem;
+    
+}
+
+.project-info .project-title{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1rem;
+      
+}
