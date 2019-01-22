@@ -14,6 +14,7 @@ export class ExtraInfoComponent implements OnInit {
 
   constructor() {}
 
+  // Toggle Info Method: show or hide information about the project.
   ocultarInfo() {
     this.ocultarData = !this.ocultarData;
   }

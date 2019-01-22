@@ -8,6 +8,7 @@ import { listener } from '@angular/core/src/render3';
 })
 export class DataManagerService {
   data: { lists: Array<List> } = {
+    // Let's create some dummy data in order to populate the initial state of our app
     lists: [
       {
         listId: 0,
@@ -119,6 +120,8 @@ export class DataManagerService {
   getData() {
     return this.data;
   }
+
+  // Method used to create a new list
   addNewList(name: string) {
     const now = new Date();
     const newList: List = {
@@ -130,10 +133,13 @@ export class DataManagerService {
     };
     this.data.lists.push(newList);
   }
+
+  // Method used to remove a list
   deleteList(listId: number) {
     this.data.lists = this.data.lists.filter(list => list.listId !== listId);
   }
 
+  // Method used to create a new task
   addNewTask(text:string, list:List){
     const now = new Date();
     const newTask: Task = {
@@ -146,7 +152,8 @@ export class DataManagerService {
         createdAt: now,
         modifiedAt: now,
     };
-
+    
+    // List Id Validation 
     this.data.lists = this.data.lists.map(listObj => {
       if(listObj.listId === list.listId) {
         listObj.tasks.push(newTask);
@@ -155,6 +162,7 @@ export class DataManagerService {
     });
   }
   
+  // Method used to remove a task
   deleteTask(task: Task){
     this.data.lists = this.data.lists.map(listObj => {
       if(listObj.listId === task.listId) {
@@ -164,11 +172,13 @@ export class DataManagerService {
     });
 }
 
+  // Let's create a method to modify the name of a list
   editListName(list: List) {
   this.data.lists = this.data.lists.map
   (listObj => (listObj.listId === list.listId ? list : listObj));
   }
 
+  // Let's create a method to modify the tasks
   editTask(newTask: Task) {
     this.data.lists = this.data.lists.map(list => {
       if(list.listId === newTask.listId){

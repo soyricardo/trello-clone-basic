@@ -15,12 +15,14 @@ export class ListComponent {
 
   constructor(private dataService: DataManagerService) {}
 
+  // Let's create a method to remove a list
   delete() {
     if (confirm('Do you really want to delete the list ' + this.list.name)) {
       this.dataService.deleteList(this.list.listId);
     }
   }
 
+  // Let's create a method to add a New task
   newTask(ev) {
     const text = ev.target.value.trim();
     if (text !== '') {
@@ -29,6 +31,8 @@ export class ListComponent {
     }
     
   }
+
+  // List edition: methods to modify the name of a list and cancel edition
   editName() {
     this.list.name = this.newName;
     this.dataService.editListName(this.list);

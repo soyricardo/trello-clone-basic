@@ -13,6 +13,7 @@ export class TaskComponent {
   newTaskText = '';
 
   constructor(private dataService: DataManagerService) {}
+  // Let's create a method to remove a task
   deleteTask(){
     this.dataService.deleteTask(this.task);
   }
